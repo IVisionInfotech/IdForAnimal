@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_weight="1"
+        android:fontFamily="@font/bold"
+        android:text="@string/app_name"
+        android:textColor="@color/textColor"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/darkGray" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_15sdp">
+
+        <LinearLayout
+            android:id="@+id/llRetagging"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/medium"
+                android:includeFontPadding="false"
+                android:text="RFID Tag No"
+                android:textColor="@color/textColor"
+                android:textSize="13sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                app:boxBackgroundMode="none"
+                app:boxStrokeWidth="0dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/gray"
+                app:errorEnabled="false"
+                app:expandedHintEnabled="false"
+                app:hintEnabled="false"
+                app:placeholderText="Enter Microchip no "
+                app:placeholderTextColor="@color/textHintColor"
+                app:startIconDrawable="@drawable/tag"
+                app:startIconTint="@color/edit_text_icon_color_selector">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRFID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/transparent"
+                    android:fontFamily="@font/regular"
+                    android:imeOptions="actionDone"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:padding="@dimen/_15sdp"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_13sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/medium"
+                android:includeFontPadding="false"
+                android:text="Visual Tag No"
+                android:textColor="@color/textColor"
+                android:textSize="13sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                app:boxBackgroundMode="none"
+                app:boxStrokeWidth="0dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/gray"
+                app:errorEnabled="false"
+                app:expandedHintEnabled="false"
+                app:hintEnabled="false"
+                app:placeholderText="Enter Visual tag no"
+                app:placeholderTextColor="@color/textHintColor"
+                app:startIconDrawable="@drawable/tag"
+                app:startIconTint="@color/edit_text_icon_color_selector">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etVisualTagNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/transparent"
+                    android:fontFamily="@font/regular"
+                    android:imeOptions="actionDone"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:padding="@dimen/_15sdp"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_13sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/medium"
+            android:includeFontPadding="false"
+            android:text="Date"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_11sdp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_12sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/calendar"
+                app:tint="@color/edit_text_icon_color_selector" />
+
+            <TextView
+                android:id="@+id/etDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:fontFamily="@font/regular"
+                android:hint="Select Date"
+                android:includeFontPadding="false"
+                android:padding="@dimen/_3sdp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textHintColor"
+                android:textSize="@dimen/_13sdp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <LinearLayout
+            android:id="@+id/llTreatment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvSpinnerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/medium"
+                android:includeFontPadding="false"
+                android:text="Treatment &amp; Operation"
+                android:textColor="@color/textColor"
+                android:textSize="13sp" />
+
+            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                android:id="@+id/spinnerType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_text_background"
+                android:padding="@dimen/_5sdp"
+                app:smsp_arrowColor="@color/darkGray"
+                app:smsp_arrowPaddingLeft="-2dp"
+                app:smsp_arrowSize="@dimen/_10sdp"
+                app:smsp_enableErrorLabel="false"
+                app:smsp_enableFloatingLabel="false"
+                app:smsp_enableSearchHeader="false"
+                app:smsp_hint="Select"
+                app:smsp_hintColor="@color/textHintColor"
+                app:smsp_hintSize="@dimen/_13sdp"
+                app:smsp_isSearchable="true"
+                app:smsp_itemColor="@color/textColor"
+                app:smsp_itemListColor="@color/textHintColor"
+                app:smsp_itemListHintColor="@color/textHintColor"
+                app:smsp_itemSize="@dimen/_13sdp"
+                app:smsp_itemView="@layout/spinner_list_item"
+                app:smsp_selectedItemListColor="@color/textColor"
+                app:smsp_underlineSize="0dp" />
+
+            <LinearLayout
+                android:id="@+id/llIdentify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:text="Source of Identify"
+                    android:textColor="@color/textColor"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_2sdp">
+
+                    <RadioGroup
+                        android:id="@+id/rdgSourceOfIdentify"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rdOnField"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:fontFamily="@font/regular"
+                            android:includeFontPadding="false"
+                            android:text="On Field"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <RadioButton
+                            android:id="@+id/rdCattlePond"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/regular"
+                            android:includeFontPadding="false"
+                            android:text="Cattle Pond"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </RadioGroup>
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinnerCattle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/edit_text_background"
+                        android:visibility="gone"
+                        app:smsp_arrowColor="@color/darkGray"
+                        app:smsp_arrowPaddingLeft="-2dp"
+                        app:smsp_arrowSize="@dimen/_10sdp"
+                        app:smsp_enableErrorLabel="false"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_enableSearchHeader="false"
+                        app:smsp_hint="Select Cattle Pond"
+                        app:smsp_hintColor="@color/textHintColor"
+                        app:smsp_hintSize="@dimen/_13sdp"
+                        app:smsp_isSearchable="true"
+                        app:smsp_itemColor="@color/textColor"
+                        app:smsp_itemListColor="@color/textHintColor"
+                        app:smsp_itemListHintColor="@color/textHintColor"
+                        app:smsp_itemSize="@dimen/_13sdp"
+                        app:smsp_itemView="@layout/spinner_list_item"
+                        app:smsp_selectedItemListColor="@color/textColor"
+                        app:smsp_underlineSize="0dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llOther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:text="Other Vaccination"
+                    android:textColor="@color/textColor"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background"
+                    app:boxBackgroundMode="none"
+                    app:boxStrokeWidth="0dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/gray"
+                    app:errorEnabled="false"
+                    app:expandedHintEnabled="false"
+                    app:hintEnabled="false"
+                    app:placeholderText="Enter other detail"
+                    app:placeholderTextColor="@color/textHintColor"
+                    app:startIconDrawable="@drawable/tag"
+                    app:startIconTint="@color/edit_text_icon_color_selector">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/transparent"
+                        android:fontFamily="@font/regular"
+                        android:imeOptions="actionNext"
+                        android:includeFontPadding="false"
+                        android:inputType="text"
+                        android:padding="@dimen/_15sdp"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_13sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/medium"
+            android:includeFontPadding="false"
+            android:text="Remark"
+            android:textColor="@color/textColor"
+            android:textSize="13sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            app:boxBackgroundMode="none"
+            app:boxStrokeWidth="0dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/gray"
+            app:errorEnabled="false"
+            app:expandedHintEnabled="false"
+            app:hintEnabled="false"
+            app:placeholderText="Enter remark"
+            app:placeholderTextColor="@color/textHintColor"
+            app:startIconDrawable="@drawable/tag"
+            app:startIconTint="@color/edit_text_icon_color_selector">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRemark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/transparent"
+                android:fontFamily="@font/regular"
+                android:imeOptions="actionDone"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:padding="@dimen/_15sdp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_13sdp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            style="@style/buttonPrimaryRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:includeFontPadding="false"
+            android:text="Submit" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>

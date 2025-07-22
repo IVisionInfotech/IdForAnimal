@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mAddAnimalDeath"
+        android:icon="@drawable/death"
+        android:iconTint="@color/black"
+        android:title="Add Animal Death" />
+    <item
+        android:id="@+id/mAnimalTransfer"
+        android:icon="@drawable/truck"
+        android:iconTint="@color/black"
+        android:title="Animal Transfer" />
+    <item
+        android:id="@+id/mAnimalRetagging"
+        android:icon="@drawable/tag"
+        android:iconTint="@color/black"
+        android:title="Animal Retagging" />
+    <item
+        android:id="@+id/mAnimalTreatment"
+        android:icon="@drawable/tretment"
+        android:title="Animal Treatment" />
+    <item
+        android:id="@+id/mAnimalVaccination"
+        android:icon="@drawable/vaccinated"
+        android:title="Animal Vaccination" />
+    <item
+        android:id="@+id/mEdit"
+        android:icon="@drawable/edit_menu"
+        android:title="Edit" />
+    <item
+        android:id="@+id/mDelete"
+        android:icon="@drawable/delete_menu"
+        android:title="Delete" />
+</menu>

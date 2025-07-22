@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<color name="colorPrimary">#00923f</color>
+    <color name="colorPrimaryDark">#006313</color>
+    <color name="colorPrimaryLight">#ebffff</color>-->
+    <color name="colorPrimary">#3085fe</color>
+    <color name="colorPrimaryDark">#3085fe</color>
+    <color name="colorPrimaryLight">#e6f1ff</color>
+    <color name="colorAccent">#1D64CC</color>
+    <color name="colorAccentDark">#1D64CC</color>
+    <color name="colorAccentLight">#c1daff</color>
+    <!--    <color name="colorAccentLight">#fffcff</color>-->
+
+    <color name="transparent">#00000000</color>
+    <color name="blackTrans80">#80000000</color>
+    <color name="black">#000000</color>
+    <color name="darkBlack">#101b2d</color>
+    <color name="lightBlack">#404957</color>
+    <color name="blackGray">#585f6c</color>
+    <color name="darkGray">#878d96</color>
+    <color name="gray">#9fa4ab</color>
+    <color name="whiteGray">#EEEEEE</color>
+    <color name="offWhite">#F8F8F8</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="whiteTransparent30">#30FFFFFF</color>
+
+    <color name="cardViewBorder">#81C784</color>
+    <color name="layoutBackground">#f5f9ff</color>
+    <color name="viewBackground">#EEEEEE</color>
+    <!--    <color name="unreadBackground">#E6F2FE</color>-->
+    <color name="iconTintColorDark">#2a2b6c</color>
+    <color name="textHintColor">#9fa4ab</color>
+    <color name="textColor">#283242</color>
+    <color name="green">#17871B</color>
+    <color name="darkGreen">#007323</color>
+    <color name="red">#DC0000</color>
+    <color name="darkRed">#A70B00</color>
+    <color name="blue">#1e88e5</color>
+
+    <color name="one">#ffca62</color>
+    <color name="two">#acebff</color>
+
+    <color name="light_blue">#16A4B9D8</color>
+    <color name="darkerTextColor">#4F4F4F</color>
+
+</resources>

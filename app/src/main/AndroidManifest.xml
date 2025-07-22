@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="s" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-feature android:name="android.hardware.type.pc" />
+
+
+    <application
+        android:name=".utils.MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PrimaryTheme"
+        tools:targetApi="31">
+        <activity
+            android:name=".activity.audit.OfflineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.audit.ViewAuditAnimalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.audit.AddAuditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.audit.AuditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainNewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NgoListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddAnimalToNgoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ImagePreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AnimalDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AnimalOwnerListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OwnerListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddAnimalOwnerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AnimalOwnerDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddAnimalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AnimalListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bluetooth.BluetoothActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ReleaseAnimalListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddAnimalReleaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddAnimalCatchingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.audit.AuditAnimalListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AnimalCatchingListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".permission.PermissionsActivity"
+            android:screenOrientation="portrait" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,2171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:background="@drawable/layout_background"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/back"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/bold"
+                android:text="@string/animal_owner_detail"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:foreground="@color/light_blue"
+                            app:cardCornerRadius="@dimen/_10sdp"
+                            app:cardMaxElevation="12dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="@dimen/_70sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/regular"
+                                    android:includeFontPadding="false"
+                                    android:paddingLeft="@dimen/_5sdp"
+                                    android:text="Microchip No :"
+                                    android:textColor="@color/textHintColor"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <TextView
+                                    android:id="@+id/tvRFID"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/medium"
+                                    android:includeFontPadding="false"
+                                    android:padding="@dimen/_5sdp"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/regular"
+                                    android:includeFontPadding="false"
+                                    android:paddingLeft="@dimen/_5sdp"
+                                    android:text="Visual Tag No :"
+                                    android:textColor="@color/textHintColor"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <TextView
+                                    android:id="@+id/txtVisualNo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5sdp"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_1sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:background="@color/darkGray" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:id="@+id/llType"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_70sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Animal Type"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvType"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llBreed"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_70sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Breed &amp; Color"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvBreed"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llTail"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_70sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Tail &amp; Horn"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvTail"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/llVisualSign"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_70sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Visual Sign"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvSign"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/llAge"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_70sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="DOB or Age"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvDOB"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/llGrith"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_70sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Girth &amp; Length"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvGirth"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/llMilk"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_70sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Milk &amp; Type"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvMilk"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/llLactation"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_70sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Lactation"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvLactation"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/llStatus"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_70sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Status"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvStatus"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/llRemark"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_70sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Remarks"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvRemarks"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/llTagging"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_70sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Tagging Date"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvTaggingDate"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llValidDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:singleLine="true"
+                                            android:text="Animal Valid Date"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvValidDate"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/ivImage"
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+                                android:layout_gravity="end"
+                                android:layout_margin="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/animal_bg"
+                                app:shapeAppearanceOverlay="@style/ImageStyle_Corners_Cut_Square" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:foreground="@color/light_blue"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_10sdp">
+
+                                <TextView
+                                    android:id="@+id/tvName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/semibold"
+                                    android:includeFontPadding="false"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <LinearLayout
+                                    android:id="@+id/llZone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tvZoneName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/regular"
+                                        android:includeFontPadding="false"
+                                        android:textColor="@color/lightBlack"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                    <View
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="@dimen/_5sdp"
+                                        android:layout_marginLeft="@dimen/_10sdp"
+                                        android:layout_marginRight="@dimen/_10sdp"
+                                        android:background="@drawable/circle_primary_light_background" />
+
+                                    <TextView
+                                        android:id="@+id/tvWardName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/regular"
+                                        android:includeFontPadding="false"
+                                        android:textColor="@color/lightBlack"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                </LinearLayout>
+
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/llMoreDetails"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:id="@+id/llContact"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Contact"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvContact"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llContact2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Alternative Contact"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvContact2"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llEmail"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Email"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvEmail"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llRegister"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Register No"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvRegistrationNo"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llRegisterDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Register Date"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvRegisterDate"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llOwnerValidDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:singleLine="true"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Owner Valid Date"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvOwnerValidDate"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                        android:id="@+id/llAadhar"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Aadhar No"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvAadharNo"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llElection"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Election No"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvElectionNo"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llLicense"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="License No"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvLicenseNo"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llGender"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Gender"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvGender"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llHouse"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="House No"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvHouseNo"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llStreet"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Street"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvStreet"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llLandmark"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Landmark"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvLandmark"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llArea"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Area"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvArea"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llState"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="State &amp; Country"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvStateCountry"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llCity"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="City &amp; District"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvCityDistrict"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llPinCode"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Pin Code"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvPinCode"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llTenement"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Tenement No"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvTenementNo"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llAnimalPlace"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Animal Place"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvPlaceArea"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llPlaceOwned"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Place Owned By"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvOwnedBy"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llShed"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Shed"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvShed"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llStorage"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Storage Available"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvStorageAvailable"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llDrinking"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Drinking Water Facility"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvWaterFacility"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llDisposal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Disposal Facility"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvDisposalFacility"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llOwnerRemarks"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="@dimen/_85sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="Remarks"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text=":"
+                                            android:textColor="@color/textHintColor"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvOwenerRemarks"
+                                            android:layout_width="@dimen/_130sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:includeFontPadding="false"
+                                            android:padding="@dimen/_5sdp"
+                                            android:textColor="@color/darkBlack"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </LinearLayout>
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/_150sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_light_gray_border"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:fontFamily="@font/regular"
+                                        android:includeFontPadding="false"
+                                        android:text="Aadhar Front"
+                                        android:textColor="@color/textHintColor"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:layout_marginBottom="@dimen/_3sdp"
+                                        android:background="@color/layoutBackground" />
+
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        android:id="@+id/ivAadharFront"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_75sdp"
+                                        app:riv_corner_radius="@dimen/_10sdp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/_150sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_light_gray_border"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:fontFamily="@font/regular"
+                                        android:includeFontPadding="false"
+                                        android:text="Aadhar Back"
+                                        android:textColor="@color/textHintColor"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:layout_marginBottom="@dimen/_3sdp"
+                                        android:background="@color/layoutBackground" />
+
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        android:id="@+id/ivAadharBack"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_75sdp"
+                                        app:riv_corner_radius="@dimen/_10sdp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/_150sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_light_gray_border"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:fontFamily="@font/regular"
+                                        android:includeFontPadding="false"
+                                        android:text="Election Front"
+                                        android:textColor="@color/textHintColor"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:layout_marginBottom="@dimen/_3sdp"
+                                        android:background="@color/layoutBackground" />
+
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        android:id="@+id/ivElectionFront"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_75sdp"
+                                        app:riv_corner_radius="@dimen/_10sdp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/_150sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_light_gray_border"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:fontFamily="@font/regular"
+                                        android:includeFontPadding="false"
+                                        android:text="Election Back"
+                                        android:textColor="@color/textHintColor"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:layout_marginBottom="@dimen/_3sdp"
+                                        android:background="@color/layoutBackground" />
+
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        android:id="@+id/ivElectionBack"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_75sdp"
+                                        app:riv_corner_radius="@dimen/_10sdp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/_150sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_light_gray_border"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:fontFamily="@font/regular"
+                                        android:includeFontPadding="false"
+                                        android:text="License Front"
+                                        android:textColor="@color/textHintColor"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:layout_marginBottom="@dimen/_3sdp"
+                                        android:background="@color/layoutBackground" />
+
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        android:id="@+id/ivLicenseFront"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_75sdp"
+                                        app:riv_corner_radius="@dimen/_10sdp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/_150sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_light_gray_border"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:fontFamily="@font/regular"
+                                        android:includeFontPadding="false"
+                                        android:text="License Back"
+                                        android:textColor="@color/textHintColor"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:layout_marginBottom="@dimen/_3sdp"
+                                        android:background="@color/layoutBackground" />
+
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        android:id="@+id/ivLicenseBack"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_75sdp"
+                                        app:riv_corner_radius="@dimen/_10sdp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/_150sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_light_gray_border"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:fontFamily="@font/regular"
+                                        android:includeFontPadding="false"
+                                        android:text="Photo No"
+                                        android:textColor="@color/textHintColor"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:layout_marginBottom="@dimen/_3sdp"
+                                        android:background="@color/layoutBackground" />
+
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        android:id="@+id/ivPhotoNo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_75sdp"
+                                        app:riv_corner_radius="@dimen/_10sdp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/_150sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_light_gray_border"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:fontFamily="@font/regular"
+                                        android:includeFontPadding="false"
+                                        android:text="Manual Form"
+                                        android:textColor="@color/textHintColor"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:layout_marginBottom="@dimen/_3sdp"
+                                        android:background="@color/layoutBackground" />
+
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        android:id="@+id/ivManualForm"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_75sdp"
+                                        app:riv_corner_radius="@dimen/_10sdp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

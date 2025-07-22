@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space">16dp</dimen>
+    <dimen name="space_half">8dp</dimen>
+    <dimen name="space_quarter">4dp</dimen>
+    <dimen name="space_double">32dp</dimen>
+
+    <dimen name="font_medium">12sp</dimen>
+
+    <dimen name="fab_menu_spacing">16dp</dimen>
+    <dimen name="fab_size_normal">56dp</dimen>
+    <dimen name="fab_size_mini">40dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
+    <dimen name="floating_action_menu_sub_icon_margin">8dp</dimen>
+
+</resources>

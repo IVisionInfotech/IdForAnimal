@@ -1,0 +1,1110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/medium"
+                android:includeFontPadding="false"
+                android:text="Catching Location"
+                android:textColor="@color/textColor"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    app:boxBackgroundMode="none"
+                    app:boxStrokeWidth="0dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/gray"
+                    app:errorEnabled="false"
+                    app:expandedHintEnabled="false"
+                    app:hintEnabled="false"
+                    app:placeholderText="Enter area"
+                    app:placeholderTextColor="@color/textHintColor"
+                    app:startIconDrawable="@drawable/location"
+                    app:startIconTint="@color/edit_text_icon_color_selector">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/transparent"
+                        android:fontFamily="@font/regular"
+                        android:imeOptions="actionDone"
+                        android:includeFontPadding="false"
+                        android:padding="@dimen/_15sdp"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_13sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/target_location" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="Sub Type"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinnerSubType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/edit_text_background"
+                        android:padding="@dimen/_5sdp"
+                        app:smsp_arrowColor="@color/darkGray"
+                        app:smsp_arrowPaddingLeft="-2dp"
+                        app:smsp_arrowSize="@dimen/_10sdp"
+                        app:smsp_enableErrorLabel="false"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_enableSearchHeader="false"
+                        app:smsp_hint="Select Sub Type"
+                        app:smsp_hintColor="@color/textHintColor"
+                        app:smsp_hintSize="@dimen/_13sdp"
+                        app:smsp_isSearchable="true"
+                        app:smsp_itemColor="@color/textColor"
+                        app:smsp_itemListColor="@color/textHintColor"
+                        app:smsp_itemListHintColor="@color/textHintColor"
+                        app:smsp_itemSize="@dimen/_13sdp"
+                        app:smsp_itemView="@layout/spinner_list_item"
+                        app:smsp_selectedItemListColor="@color/textColor"
+                        app:smsp_underlineSize="0dp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="match_parent" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="Breed Type"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinnerBreedType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/edit_text_background"
+                        android:padding="@dimen/_5sdp"
+                        app:smsp_arrowColor="@color/darkGray"
+                        app:smsp_arrowPaddingLeft="-2dp"
+                        app:smsp_arrowSize="@dimen/_10sdp"
+                        app:smsp_enableErrorLabel="false"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_enableSearchHeader="false"
+                        app:smsp_hint="Select Breed Type"
+                        app:smsp_hintColor="@color/textHintColor"
+                        app:smsp_hintSize="@dimen/_13sdp"
+                        app:smsp_isSearchable="true"
+                        app:smsp_itemColor="@color/textColor"
+                        app:smsp_itemListColor="@color/textHintColor"
+                        app:smsp_itemListHintColor="@color/textHintColor"
+                        app:smsp_itemSize="@dimen/_13sdp"
+                        app:smsp_itemView="@layout/spinner_list_item"
+                        app:smsp_selectedItemListColor="@color/textColor"
+                        app:smsp_underlineSize="0dp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/medium"
+                android:includeFontPadding="false"
+                android:text="Color"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_11sdp" />
+
+            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                android:id="@+id/spinnerColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_text_background"
+                android:padding="@dimen/_5sdp"
+                app:smsp_arrowColor="@color/darkGray"
+                app:smsp_arrowPaddingLeft="-2dp"
+                app:smsp_arrowSize="@dimen/_10sdp"
+                app:smsp_enableErrorLabel="false"
+                app:smsp_enableFloatingLabel="false"
+                app:smsp_enableSearchHeader="false"
+                app:smsp_hint="Select Color"
+                app:smsp_hintColor="@color/textHintColor"
+                app:smsp_hintSize="@dimen/_13sdp"
+                app:smsp_isSearchable="true"
+                app:smsp_itemColor="@color/textColor"
+                app:smsp_itemListColor="@color/textHintColor"
+                app:smsp_itemListHintColor="@color/textHintColor"
+                app:smsp_itemSize="@dimen/_13sdp"
+                app:smsp_itemView="@layout/spinner_list_item"
+                app:smsp_selectedItemListColor="@color/textColor"
+                app:smsp_underlineSize="0dp" />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llTail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="Tail"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinnerTail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/edit_text_background"
+                        android:padding="@dimen/_5sdp"
+                        app:smsp_arrowColor="@color/darkGray"
+                        app:smsp_arrowPaddingLeft="-2dp"
+                        app:smsp_arrowSize="@dimen/_10sdp"
+                        app:smsp_enableErrorLabel="false"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_enableSearchHeader="false"
+                        app:smsp_hint="Select Tail"
+                        app:smsp_hintColor="@color/textHintColor"
+                        app:smsp_hintSize="@dimen/_13sdp"
+                        app:smsp_isSearchable="true"
+                        app:smsp_itemColor="@color/textColor"
+                        app:smsp_itemListColor="@color/textHintColor"
+                        app:smsp_itemListHintColor="@color/textHintColor"
+                        app:smsp_itemSize="@dimen/_13sdp"
+                        app:smsp_itemView="@layout/spinner_list_item"
+                        app:smsp_selectedItemListColor="@color/textColor"
+                        app:smsp_underlineSize="0dp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="match_parent" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="Horn"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinnerHorn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/edit_text_background"
+                        android:padding="@dimen/_5sdp"
+                        app:smsp_arrowColor="@color/darkGray"
+                        app:smsp_arrowPaddingLeft="-2dp"
+                        app:smsp_arrowSize="@dimen/_10sdp"
+                        app:smsp_enableErrorLabel="false"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_enableSearchHeader="false"
+                        app:smsp_hint="Select Horn"
+                        app:smsp_hintColor="@color/textHintColor"
+                        app:smsp_hintSize="@dimen/_13sdp"
+                        app:smsp_isSearchable="true"
+                        app:smsp_itemColor="@color/textColor"
+                        app:smsp_itemListColor="@color/textHintColor"
+                        app:smsp_itemListHintColor="@color/textHintColor"
+                        app:smsp_itemSize="@dimen/_13sdp"
+                        app:smsp_itemView="@layout/spinner_list_item"
+                        app:smsp_selectedItemListColor="@color/textColor"
+                        app:smsp_underlineSize="0dp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llVisual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:text="Any Visual Sign"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_11sdp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background"
+                    app:boxBackgroundMode="none"
+                    app:boxStrokeWidth="0dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/gray"
+                    app:errorEnabled="false"
+                    app:expandedHintEnabled="false"
+                    app:hintEnabled="false"
+                    app:placeholderText="Enter Any Visual Sign"
+                    app:placeholderTextColor="@color/textHintColor"
+                    app:startIconDrawable="@drawable/notes"
+                    app:startIconTint="@color/edit_text_icon_color_selector">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/transparent"
+                        android:fontFamily="@font/regular"
+                        android:imeOptions="actionNext"
+                        android:includeFontPadding="false"
+                        android:inputType="text"
+                        android:padding="@dimen/_15sdp"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_13sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="Age(Approx In Months)"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_background"
+                        app:boxBackgroundMode="none"
+                        app:boxStrokeWidth="0dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/gray"
+                        app:errorEnabled="false"
+                        app:expandedHintEnabled="false"
+                        app:hintEnabled="false"
+                        app:placeholderText="Enter Age"
+                        app:placeholderTextColor="@color/textHintColor"
+                        app:startIconDrawable="@drawable/age"
+                        app:startIconTint="@color/edit_text_icon_color_selector">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/transparent"
+                            android:fontFamily="@font/regular"
+                            android:imeOptions="actionNext"
+                            android:includeFontPadding="false"
+                            android:inputType="number"
+                            android:padding="@dimen/_15sdp"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="match_parent" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="Date Of Birth"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edit_text_background"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_12sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:src="@drawable/calendar"
+                            app:tint="@color/edit_text_icon_color_selector" />
+
+                        <TextView
+                            android:id="@+id/tvDOB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:fontFamily="@font/regular"
+                            android:hint="Select DOB"
+                            android:includeFontPadding="false"
+                            android:padding="@dimen/_3sdp"
+                            android:textColor="@color/textColor"
+                            android:textColorHint="@color/textHintColor"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llGrith"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="Girth"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_background"
+                        app:boxBackgroundMode="none"
+                        app:boxStrokeWidth="0dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/gray"
+                        app:errorEnabled="false"
+                        app:expandedHintEnabled="false"
+                        app:hintEnabled="false"
+                        app:placeholderText="Enter Girth"
+                        app:placeholderTextColor="@color/textHintColor"
+                        app:startIconDrawable="@drawable/girth"
+                        app:startIconTint="@color/edit_text_icon_color_selector">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etGirth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/transparent"
+                            android:fontFamily="@font/regular"
+                            android:imeOptions="actionNext"
+                            android:includeFontPadding="false"
+                            android:inputType="numberDecimal"
+                            android:padding="@dimen/_15sdp"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="match_parent" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="Length"
+                        android:textColor="@color/textColor"
+                        android:textSize="13sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_background"
+                        app:boxBackgroundMode="none"
+                        app:boxStrokeWidth="0dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/gray"
+                        app:errorEnabled="false"
+                        app:expandedHintEnabled="false"
+                        app:hintEnabled="false"
+                        app:placeholderText="Enter Length"
+                        app:placeholderTextColor="@color/textHintColor"
+                        app:startIconDrawable="@drawable/flexible"
+                        app:startIconTint="@color/edit_text_icon_color_selector">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etLegth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/transparent"
+                            android:fontFamily="@font/regular"
+                            android:imeOptions="actionNext"
+                            android:includeFontPadding="false"
+                            android:inputType="numberDecimal"
+                            android:padding="@dimen/_15sdp"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llMilk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="Average Milk/Day"
+                        android:textColor="@color/textColor"
+                        android:textSize="13sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_background"
+                        app:boxBackgroundMode="none"
+                        app:boxStrokeWidth="0dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/gray"
+                        app:errorEnabled="false"
+                        app:expandedHintEnabled="false"
+                        app:hintEnabled="false"
+                        app:placeholderText="Enter Milk/Day"
+                        app:placeholderTextColor="@color/textHintColor"
+                        app:startIconDrawable="@drawable/milk1"
+                        app:startIconTint="@color/edit_text_icon_color_selector">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etMilkPerDay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/transparent"
+                            android:fontFamily="@font/regular"
+                            android:imeOptions="actionNext"
+                            android:includeFontPadding="false"
+                            android:inputType="numberDecimal"
+                            android:padding="@dimen/_15sdp"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="match_parent" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="Lactation"
+                        android:textColor="@color/textColor"
+                        android:textSize="13sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_background"
+                        app:boxBackgroundMode="none"
+                        app:boxStrokeWidth="0dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/gray"
+                        app:errorEnabled="false"
+                        app:expandedHintEnabled="false"
+                        app:hintEnabled="false"
+                        app:placeholderText="Enter Lactation"
+                        app:placeholderTextColor="@color/textHintColor"
+                        app:startIconDrawable="@drawable/milk"
+                        app:startIconTint="@color/edit_text_icon_color_selector">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etLactation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/transparent"
+                            android:fontFamily="@font/regular"
+                            android:imeOptions="actionNext"
+                            android:includeFontPadding="false"
+                            android:inputType="numberDecimal"
+                            android:padding="@dimen/_15sdp"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llMilkType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:text="Milk Type"
+                    android:textColor="@color/textColor"
+                    android:textSize="13sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdgMilkType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_2sdp">
+
+                    <RadioButton
+                        android:id="@+id/rdoMilkTypeA1"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:includeFontPadding="false"
+                        android:text="A1"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoMilkTypeA2"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:includeFontPadding="false"
+                        android:text="A2"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_13sdp" />
+
+                </RadioGroup>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:text="Status"
+                    android:textColor="@color/textColor"
+                    android:textSize="13sp" />
+
+                <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                    android:id="@+id/spinnerStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/edit_text_background"
+                    android:padding="@dimen/_5sdp"
+                    app:smsp_arrowColor="@color/darkGray"
+                    app:smsp_arrowPaddingLeft="-2dp"
+                    app:smsp_arrowSize="@dimen/_10sdp"
+                    app:smsp_enableErrorLabel="false"
+                    app:smsp_enableFloatingLabel="false"
+                    app:smsp_enableSearchHeader="false"
+                    app:smsp_hint="Select Status"
+                    app:smsp_hintColor="@color/textHintColor"
+                    app:smsp_hintSize="@dimen/_13sdp"
+                    app:smsp_isSearchable="true"
+                    app:smsp_itemColor="@color/textColor"
+                    app:smsp_itemListColor="@color/textHintColor"
+                    app:smsp_itemListHintColor="@color/textHintColor"
+                    app:smsp_itemSize="@dimen/_13sdp"
+                    app:smsp_itemView="@layout/spinner_list_item"
+                    app:smsp_selectedItemListColor="@color/textColor"
+                    app:smsp_underlineSize="0dp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llIdentify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:text="Source of Identify"
+                    android:textColor="@color/textColor"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_2sdp">
+
+                    <RadioGroup
+                        android:id="@+id/rdgSourceOfIdentify"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rdOnField"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:fontFamily="@font/regular"
+                            android:includeFontPadding="false"
+                            android:text="On Field"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <RadioButton
+                            android:id="@+id/rdCattlePond"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/regular"
+                            android:includeFontPadding="false"
+                            android:text="Cattle Pond"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </RadioGroup>
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinnerCattle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/edit_text_background"
+                        android:visibility="gone"
+                        app:smsp_arrowColor="@color/darkGray"
+                        app:smsp_arrowPaddingLeft="-2dp"
+                        app:smsp_arrowSize="@dimen/_10sdp"
+                        app:smsp_enableErrorLabel="false"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_enableSearchHeader="false"
+                        app:smsp_hint="Select Cattle Pond"
+                        app:smsp_hintColor="@color/textHintColor"
+                        app:smsp_hintSize="@dimen/_13sdp"
+                        app:smsp_isSearchable="true"
+                        app:smsp_itemColor="@color/textColor"
+                        app:smsp_itemListColor="@color/textHintColor"
+                        app:smsp_itemListHintColor="@color/textHintColor"
+                        app:smsp_itemSize="@dimen/_13sdp"
+                        app:smsp_itemView="@layout/spinner_list_item"
+                        app:smsp_selectedItemListColor="@color/textColor"
+                        app:smsp_underlineSize="0dp" />
+                </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/medium"
+                android:includeFontPadding="false"
+                android:text="Image"
+                android:textColor="@color/textColor"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/llImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ivImage"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rlImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ivLocationImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="@dimen/_300sdp"
+                        android:src="@drawable/image"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvDateTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@color/blackTrans80"
+                        android:fontFamily="@font/bold"
+                        android:includeFontPadding="false"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="@+id/ivLocationImage"
+                        app:layout_constraintTop_toTopOf="@+id/ivLocationImage" />
+
+                    <TextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@color/blackTrans80"
+                        android:fontFamily="@font/semibold"
+                        android:includeFontPadding="false"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivLocationImage"
+                        app:layout_constraintEnd_toEndOf="@+id/ivLocationImage"
+                        app:layout_constraintStart_toStartOf="@+id/ivLocationImage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/medium"
+                android:includeFontPadding="false"
+                android:text="Remarks"
+                android:textColor="@color/textColor"
+                android:textSize="13sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                app:boxBackgroundMode="none"
+                app:boxStrokeWidth="0dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/gray"
+                app:errorEnabled="false"
+                app:expandedHintEnabled="false"
+                app:hintEnabled="false"
+                app:placeholderText="Enter Remarks"
+                app:placeholderTextColor="@color/textHintColor"
+                app:startIconDrawable="@drawable/remarks"
+                app:startIconTint="@color/edit_text_icon_color_selector">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRemarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/transparent"
+                    android:fontFamily="@font/regular"
+                    android:imeOptions="actionDone"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:padding="@dimen/_15sdp"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_13sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvManualForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/medium"
+                android:includeFontPadding="false"
+                android:text="Manual Form"
+                android:textColor="@color/textColor"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/ivManualForm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:background="@drawable/edit_text_background"
+                android:src="@drawable/image" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/layoutBackground" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accent_button_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_8sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:src="@drawable/previous"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semibold"
+                    android:includeFontPadding="false"
+                    android:text="Previous step"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_5sdp"
+            android:layout_weight="1" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/primary_button_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/tvSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semibold"
+                    android:includeFontPadding="false"
+                    android:text="Add"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/next"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

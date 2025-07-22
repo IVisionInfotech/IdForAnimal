@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:iconTint="@color/black"
+        android:icon="@drawable/add"
+        android:id="@+id/mAddAnimal"
+        android:title="Add Animal" />
+    <item
+        android:icon="@drawable/release"
+        android:id="@+id/mRelease"
+        android:title="Release animal" />
+    <item
+        android:icon="@drawable/edit_menu"
+        android:id="@+id/mEdit"
+        android:title="Edit" />
+    <item
+        android:icon="@drawable/delete_menu"
+        android:id="@+id/mDelete"
+        android:title="Delete" />
+</menu>

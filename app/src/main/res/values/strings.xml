@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">ID for Animal</string>
+
+
+    <string name="please_wait">Please wait..</string>
+    <string name="share_text" />
+    <string name="confirmation_logout">Are you sure? You wan\'t to logout</string>
+    <string name="confirmation_remove">Are you sure? You wan\'t to delete</string>
+    <string name="confirmation_message">Are you sure? You wan\'t to</string>
+
+
+    <!--  MainActivity -->
+
+    <!--  DeviceListActivity -->
+    <string name="animal_death">Animal Death</string>
+    <string name="animal_transfer">Animal Transfer</string>
+    <string name="animal_retagging">Animal Retagging</string>
+    <string name="animal_treatment">Animal Treatment</string>
+    <string name="animal_vaccination">Animal Vaccination</string>
+    <string name="animal_owner_detail"><![CDATA[Animal & Owner Detail]]></string>
+    <string name="view_more">View More</string>
+    <string name="tagging_date">Tagging Date<font color='#FF0000'>*</font></string>
+    <string name="valid_date">Valid Date</string>
+    <string name="rfid_tag_no">Microchip no<font color='#FF0000'>*</font></string>
+    <string name="visual_tag_no">Visual TAG No<font color='#FF0000'>*</font></string>
+    <string name="animal_type">Animal Type<font color='#FF0000'>*</font></string>
+    <string name="first_name">First Name<font color='#FF0000'>*</font></string>
+    <string name="last_name">Last Name<font color='#FF0000'>*</font></string>
+    <string name="date">Date<font color='#FF0000'>*</font></string>
+    <string name="releasedate">Release Date<font color='#FF0000'>*</font></string>
+    <string name="registrationdate">Registration Date<font color='#FF0000'>*</font></string>
+    <string name="Adate">Application Date</string>
+    <string name="aadhaar_no">Aadhaar No<font color='#FF0000'>*</font></string>
+    <string name="house_no">House No<font color='#FF0000'>*</font></string>
+    <string name="street">Street<font color='#FF0000'>*</font></string>
+    <string name="country">Country<font color='#FF0000'>*</font></string>
+    <string name="state">State<font color='#FF0000'>*</font></string>
+    <string name="city">City<font color='#FF0000'>*</font></string>
+    <string name="pin_code">Pin Code<font color='#FF0000'>*</font></string>
+    <string name="catching_date">Catching Date<font color='#FF0000'>*</font></string>
+    <string name="catching_time">Catching Time<font color='#FF0000'>*</font></string>
+    <string name="cattle_pond">Cattle Pond<font color='#FF0000'>*</font></string>
+    <string name="zone">Zone<font color='#FF0000'>*</font></string>
+    <string name="ward">Ward<font color='#FF0000'>*</font></string>
+    <string name="vehicle_reg_no">Vehicle Reg No<font color='#FF0000'>*</font></string>
+    <string name="location_permission_dialog_message">Enhanced animal health monitoring: Keep track of your animals\' movements and identify any potential health issues early on.</string>
+    <string name="No_Internet_Connection">No Internet Connection !!!</string>
+    <string name="in_app_snack_bar_message">An update has just been downloaded.</string>
+    <string name="in_app_snack_bar_action_title">RESTART</string>
+
+    <string name="logo_description">Logo of the app</string>
+    <string name="contact">Contact<font color='#FF0000'>*</font></string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+
+
+</resources>
